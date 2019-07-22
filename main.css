@@ -296,7 +296,7 @@ select.parameters {
 
 #beerSearch h2 {
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
     font-size: 38px;
     display: flex;
     flex-direction: column;
