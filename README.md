@@ -1,5 +1,5 @@
 From API to IPA
-https://nclayt0n.github.io/APItoIPA2/
+https://nclayt0n.github.io/IPA/
 
 
 Introduction
