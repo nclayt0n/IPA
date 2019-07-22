@@ -25,10 +25,10 @@ ___________
 HTML, CSS, JavaScript/JQuery.
 
 
-![screen shot of loading screen](https://nclayt0n.github.io/ipa/images/ipascreenshot1.png "App Load Screen")
-![screen shot of loading screen](https://nclayt0n.github.io/ipa/images/ipascreenshot2.png "App Brewery Search Section")
-![screen shot of loading screen](https://nclayt0n.github.io/ipa/images/ipascreenshot3.png "App BrewDog's Beer Search Section")
-![screen shot of loading screen](https://nclayt0n.github.io/ipa/images/ipascreenshot4.png "App Beer Facts")
+![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot1.png "App Load Screen")
+![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot2.png "App Brewery Search Section")
+![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot3.png "App BrewDog's Beer Search Section")
+![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot4.png "App Beer Facts")
 
 ___________
 Always a joy to create something new to share with others. Hopefully your Hour is Happy. Cheers.
