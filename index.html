@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API to IPA</title>
 
-    <link href="main.css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <section id="links">
             <a id="brewerySearchLink" href="#brewery">Find A Local Brewery</a>
             <a id="beerSearchLink" href="#beer">Find A Beer For You</a>
-            <a id="factsSearchLink" href="#facts"> Beer Facts</a></li>
+            <a id="factsSearchLink" href="#facts"> Beer Facts</a>
         </section>
     </header>
 
@@ -43,11 +43,12 @@
                 <a id="brewery"> </a>
             </section>
             <h2>Brewery Search</h2>
-            <form id="breweryCityParameter">
-                <input class="parameters" id="brewerySearch" type="text" placeholder="City">
-            </form>
-            <form id="breweryStateParameter">
-                <select class="parameters" name="state" id="state">
+            <form>
+                <section id="breweryCityParameter">
+                    <input class="parameters" id="brewerySearch" type="text" placeholder="City">
+                </section>
+                <section id="breweryStateParameter">
+                    <select class="parameters" name="state" id="state">
                     <option value="">State</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -100,8 +101,12 @@
                         <option value="West Virginia">West Virginia</option>
                         <option value="Wisconsin">Wisconsin</option>
                         <option value="Wyoming">Wyoming</option>
-                    </select></form>
-            <button class="parameters" id="breweryButton">SEARCH</button>
+                    </select><br>
+                </section>
+                <section>
+                    <input type="button" class="parameters" id="breweryButton" value="SEARCH"></section>
+            </form>
+
 
         </section>
 
