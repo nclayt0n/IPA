@@ -26,6 +26,7 @@ HTML, CSS, JavaScript/JQuery.
 
 
 ![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot1.png "App Load Screen")
+![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot.png "App Beginning Paragraph")
 ![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot2.png "App Brewery Search Section")
 ![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot3.png "App BrewDog's Beer Search Section")
 ![screen shot of loading screen](https://nclayt0n.github.io/IPA/images/ipascreenshot4.png "App Beer Facts")
