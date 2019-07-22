@@ -399,7 +399,7 @@ select.parameters {
     text-align: center;
     margin: 60px 20px 20px 20px;
     color: white;
-    text-shadow: .5px .5px #8bdf19;
+    text-shadow: .5px .5px rgb(202, 142, 31);
 }
 
 #bname {
@@ -732,7 +732,6 @@ p.EBC {
         border: none;
     }
     #beerFacts input {
-        text-align: left;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
@@ -862,7 +861,6 @@ p.EBC {
         font-size: 35px;
     }
     #beerFacts input {
-        text-align: left;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
@@ -891,5 +889,17 @@ p.EBC {
     .a {
         flex-direction: row;
         width: 350px;
+    }
+}
+
+@media screen and (min-width:1430px) {
+    #ibuchart {
+        height: 300px;
+    }
+    #ebcchart {
+        width: 400px;
+    }
+    .ABV {
+        text-align: center;
     }
 }
