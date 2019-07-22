@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API to IPA</title>
+
+    <link href="main.css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="loadPage">
+        <h1><span id="from">From</span> API <span id="to">to</span> IPA</h1>
+        <div id="links">
+            <a id="brewerySearchLink" href="#brewery">Find A Local Brewery</a>
+            <a id="beerSearchLink" href="#beer">Find A Beer For You</a>
+            <a id="factsSearchLink" href="#facts"> Beer Facts</a></li>
+        </div>
+
+    </header>
+    <nav>
+        <img id="beerLogo" src="images/logo2.png" alt="API to IPA logo">
+        <ul id="navLinks">
+
+            <li class="logo hidden" id="logo">From API <br>to IPA</li>
+
+            <li><a href="#brewery">Find a Brewery </a></li>
+            <li><a href="#beer"> Find a Beer </a></li>
+            <li><a href="#facts"> Beer Facts</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="brewerySearchContainer">
+            <div class="anchor">
+                <a id="brewery"> </a>
+            </div>
+            <h2>Brewery Search</h2>
+            <form id="breweryCityParameter">
+                <input class="parameters" id="brewerySearch" type="text" placeholder="City">
+            </form>
+            <form id="breweryStateParameter">
+                <select class="parameters" name="state" id="state">
+                    <option value="">State</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="District of Columbia">District Of Columbia</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select></form>
+            <form><input class="parameters" id="breweryButton" type="button" value="Search"></form>
+        </section>
+
+        <section>
+            <section class="breweryResults hidden">
+            </section>
+            <div class="reset2 hidden">
+                <a id="reset2" href="#brewery">New Brewery Search</a>
+            </div>
+        </section>
+
+        <section id="beerSearch">
+            <div class="anchor">
+                <a id="beer"> </a>
+            </div>
+            <h2>BrewDog's Beer Search</h2>
+            <form>
+                <div class="measurementsContainer">
+                    <div class="b"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></div>
+                    <br>
+                    <div class="b"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></div> <br>
+                    <div class="b"><input type="button" value="Number of Results" id="numParameterButton">
+                        <input type="number" id="maxNum" max="25" min="1" value="10" class="numParameterButton hidden"></div>
+                    <br>
+                    <div class="a">
+                        <input type="button" value="ABV" id="abvParameterButton"><select id="abvSelect" class="abvParameterButton hidden"><option value="greaterThan" class="abvParameterButton hidden">Greater Than</option><option value="lessThan" class="abvParameterButton hidden">Less Than</option></select>
+                        <input id="abvNum" type="number" min="3" max="13" placeholder="3-13" class="abvParameterButton hidden">
+                    </div>
+                    <br>
+                    <div class="a">
+                        <input type="button" value="IBU" id="ibuParameterButton"><select id="ibuSelect" class="ibuParameterButton hidden"><option value="greaterThan" class="ibuParameterButton hidden">Greater Than</option><option value="lessThan" class="ibuParameterButton hidden">Less Than</option></select>                        <input type="number" min="5" max="100" id="ibuNum" placeholder="5-100" class="ibuParameterButton hidden"></div>
+                    <br>
+                    <div class="a">
+                        <input type="button" value="EBC" id="ebcParameterButton"><select id="ebcSelect" class="ebcParameterButton hidden"><option value="greaterThan" class="ebcParameterButton hidden">Greater Than</option><option value="lessThan" class="ebcParameterButton hidden">Less Than</option>
+                    </select> <input id="ebcNum" class="ebcParameterButton hidden" type="number" min="1" max="140" placeholder="1-140">
+                    </div><br>
+                    <input type="button" value="Sort Search Results" id="sortParameterButton">
+                    <select id="sort" class="sortParameterButton hidden">
+                        <option value="Name">Beer Name(alphabetically)</option>
+                        <option value="ABVgreater">ABV (Low to High)</option><option value="ABVless">ABV (High to Low)</option><option value="IBUgreater">IBU (Low to High)</option><option value="IBUless">IBU (High to Low)</option><option value="EBCgreater">EBC (Low to High)</option><option value="EBCless">EBC (High to Low)</option>
+                    </select><br>
+                </div>
+            </form>
+            <input type="button" value="SEARCH" id="beerButton">
+        </section>
+
+        <section id="beerResults" class="beerResults hidden"></section>
+        <div class="reset hidden">
+            <a id="reset" href="#beer">Start New Search</a>
+        </div>
+        <section id='beerFacts'>
+            <div class="anchor">
+                <a id="facts"></a>
+            </div>
+            <h2>Beer Facts</h2>
+            <div id="abvFactsContainer">
+                <input type="button" value="ABV" id="abvFacts">
+                <p class="ABV hidden">ABV stands for Alcohol By Volume. Beer strength is the alcohol content measured by volume expressed as a percentage, that is to say, the number of millilitres of absolute alcohol in 100 ml of beer.</p>
+            </div>
+            <div id="ibuFactsContainer">
+                <input type="button" value="IBU" id="ibuFacts">
+                <p class="IBU hidden"><img src="images/IBU.png" alt="IBU chart" id="ibuchart">IBU stands for Internation Bittering Units.<br>Generally speaking, beers with IBU of less than 20 display little to no hops presence. Beers with IBU from 20 to 45, the most common
+                    range, reveal a mild to pronounced hops presence. Heavily hopped beers with IBU greater than 45 can taste quite bitter.<br><br> "Malt adds sweetness, so generously malted beers in the high IBU range can come across as more sweet than
+                    bitter, such as a dark stout. Guinness, with an IBU of 40, tastes sweeter to most drinkers than Odell 90 Schilling, a Scottish-style ale with an IBU of 27 but a distinctly bitter bite on the finish. IPAs dominate the hoppiness race,
+                    with double and triple IPAs pushing the IBU rating into the 70-plus range." <a href="https://www.thespruceeats.com/international-bittering-units-353254"> -thespruceeats</a>
+                </p>
+            </div>
+
+            <div id="ebcFactsContainer">
+                <input type="button" value="EBC" id="ebcFacts">
+                <p class="EBC hidden">EBC stands for European Brewery Convention. It refers to the color of a beer.
+                    <br><img id="ebcchart" src="images/ebc.png" alt="picutre of the EBC color chart">
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>From API to IPA, Cheers!</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

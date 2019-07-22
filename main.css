@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Permanent+Marker&display=swap');
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 24px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+    background-color: #52b611;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: 2px solid white;
+    font-weight: bold;
+    background-image: url('images/7ebfe43d7b260145615d7b549aa32228.jpg');
+    background-size: cover;
+    background-position: 130%;
+    color: black;
+}
+
+footer p {
+    background-color: #8ddf19d7;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#beerLogo {
+    height: 70px;
+    margin-left: 5px;
+    float: left;
+}
+
+
+/*load page conatiner*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 10px 365px 10px;
+    padding: 30px;
+    border: 2px solid rgb(82, 77, 77);
+    align-items: center;
+    background-image: url('images/lightsrepeat.png');
+    background-size: cover;
+    background-position: 80%;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 40px;
+    border: 1px solid rgb(82, 77, 77);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    border: 3px solid #22331c;
+    background-color: #8ddf19d3;
+    color: white;
+    text-shadow: 1px 1px#22331c;
+}
+
+h1,
+#from,
+#to {
+    font-family: 'amatic sc';
+}
+
+#from,
+#to {
+    font-size: 35px;
+    margin: 10px;
+}
+
+a#brewerySearchLink,
+a#beerSearchLink,
+a#factsSearchLink {
+    border: 3px solid #22331c;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bolder;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #8ddf19d3;
+    color: #22331c;
+    text-shadow: .25px .25px white;
+}
+
+
+/*navbar*/
+
+nav {
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0px 0px 20px 0px;
+    background-image: url('images/wood.jpg');
+    background-size: 50%;
+}
+
+#navLinks {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+    position: absolute;
+    right: -10px;
+}
+
+nav li {
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    position: relative;
+    right: 0;
+}
+
+nav ul li a {
+    display: flex;
+    font-size: 21px;
+    line-height: 22px;
+    font-weight: bold;
+    background-color: #96795696;
+    color: white;
+    text-shadow: 1px 1px#22331c;
+    font-family: 'amatic sc';
+}
+
+main {
+    margin: 0;
+}
+
+
+/*anchor position is so the boxes are offset farther down the page and not hidden under nav*/
+
+.anchor {
+    position: relative;
+}
+
+.anchor a {
+    position: absolute;
+    top: -150px;
+}
+
+
+/*brewery Search container*/
+
+#brewerySearchContainer h2 {
+    color: white;
+    text-shadow: 1px 1px #22331c
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+}
+
+#brewerySearchContainer {
+    border: 3px solid #22331c;
+    margin: 100px 30px 30px 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('images/barrel-beer1.jpg');
+    background-size: cover;
+    background-position: 110%;
+    /* background-color: #52b611; */
+}
+
+#brewerySearchContainer form {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+}
+
+input.parameters,
+select.parameters {
+    color: #22331c;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin: 2px;
+    border: 2px solid rgb(24, 31, 24);
+    background-color: white;
+    font-weight: bold;
+}
+
+
+/*brewery search results container*/
+
+.breweryResults {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+#brewName {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px rgb(202, 142, 31);
+    text-transform: uppercase;
+}
+
+.breweryResults ul {
+    background-color: #22331c;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #a1aa93;
+}
+
+.breweryResults li {
+    list-style-type: none;
+    color: white;
+    text-shadow: .5px .5px rgb(202, 142, 31);
+}
+
+.breweryResults a {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 14px;
+    color: white;
+    text-shadow: .5px .5px rgb(202, 142, 31);
+}
+
+#reset2,
+#reset {
+    border: 1px solid #a1aa93;
+    color: white;
+    text-shadow: .5px .5px #22331ccc;
+    background-color: #22331c;
+}
+
+
+/*beer search container*/
+
+#beerSearch h2 {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#beerSearch {
+    display: flex;
+    flex-direction: column;
+    margin: 300px 20px 20px 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #22331c;
+    background-image: url('images/taps.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid #22331c;
+}
+
+#beerSearch form {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+#beerSearch form input {
+    margin: 5px;
+    border: 1px solid black;
+    color: black;
+    line-height: 10px;
+    font-size: 8px;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#beerSearch select {
+    padding: 2px;
+    border: 1px solid #22331c;
+    font-size: 11px;
+    line-height: 24px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.measurementsContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.a {
+    display: flex;
+    justify-content: center;
+}
+
+#beerButton {
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: auto;
+    height: 30px;
+}
+
+#beerByName,
+#foods {
+    width: 100px;
+    padding: 5px;
+    text-indent: 5px;
+    color: #22331c;
+}
+
+#beerSearch option {
+    width: 100px;
+}
+
+#ibuNum,
+#abvNum,
+#ebcNum {
+    width: 90px;
+    padding: 5px;
+}
+
+
+/*beer search results container*/
+
+#beerResults {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    margin: 60px 20px 20px 20px;
+    color: white;
+    text-shadow: .5px .5px #8bdf19;
+}
+
+#bname {
+    background-color: white;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 5px;
+    color: #22331c;
+    border: 1px solid #8bdf19;
+}
+
+#abv,
+#ibu,
+#ebc {
+    display: flex;
+}
+
+#tagline,
+#brewDate {
+    text-align: center;
+}
+
+#beerUnits {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.beerResult {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #8bdf19;
+    background-color: #22331c;
+}
+
+.beerResult li {
+    margin: 2px;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+}
+
+
+/*beer facts container */
+
+#beerFacts {
+    display: flex;
+    flex-direction: column;
+    margin: 300px 20px 300px 20px;
+    padding: 5px;
+    text-align: center;
+    border: 3px solid #a1aa93;
+    background-image: url('images/lights.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #22331c;
+}
+
+#beerFacts h2 {
+    color: white;
+    text-shadow: .5px .5px #52b611;
+}
+
+#beerFacts input {
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #a1aa93;
+    margin: 5px;
+}
+
+#ebcchart {
+    width: 200px;
+    text-align: center;
+    border: 5px solid #a1aa93;
+}
+
+#ibuchart {
+    height: 100px;
+    float: right;
+    margin: auto;
+    border: 5px solid #a1aa93;
+    display: flex;
+}
+
+.ABV,
+.IBU,
+.EBC {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-indent: 10px;
+    background-color: #53b611b2;
+    color: black;
+    text-shadow: .5px .5px black;
+    padding: 15px;
+}
+
+p.ABV,
+p.IBU,
+p.EBC {
+    margin: 5px;
+}
+
+.EBC {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/*reset buttons*/
+
+.reset,
+.reset2 {
+    width: 100%;
+    text-align: center;
+}
+
+.reset a,
+.reset2 a {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:525px) {
+    #beerLogo {
+        height: 75px;
+        display: block;
+        margin: 0;
+        float: left;
+        margin-left: 15px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        margin: 300px 40px 500px 40px;
+        padding: 30px;
+        border: 2px solid rgb(82, 77, 77);
+        align-items: center;
+    }
+    header a {
+        display: flex;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+        border: 1px solid rgb(82, 77, 77);
+        text-align: center;
+        margin: 40px;
+        padding: 20px;
+    }
+    #links {
+        display: none;
+    }
+    #from,
+    #to {
+        font-size: 32px;
+        margin: 10px;
+    }
+    #brewerySearchLink,
+    #beerSearchLink,
+    #factsSearchLink {
+        display: none;
+    }
+    /*navbar*/
+    nav {
+        border: 1px solid grey;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        margin: auto;
+    }
+    #navLinks {
+        display: flex;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        justify-content: flex-end;
+        margin: 10px;
+    }
+    nav ul li a {
+        margin: 10px;
+        font-size: 24px;
+        border: none;
+        line-height: 24px;
+        padding: 5px;
+    }
+    #brewerySearchContainer form {
+        width: 300px;
+    }
+    input.parameters,
+    select.parameters {
+        height: 45px;
+        padding: 10px;
+    }
+    #description,
+    #tagline,
+    #brewDate,
+    #tips,
+    #food {
+        padding: 15px;
+        margin: 5px;
+    }
+    #beerUnits {
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+    }
+    #brewerySearchContainer {
+        margin: 100px 60px 100px 60px;
+        padding: 30px;
+    }
+    .breweryResults {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 600px;
+    }
+    #brewName {
+        font-size: 24px;
+    }
+    .breweryResults li,
+    .breweryResults li a {
+        font-size: 28px;
+        padding: 5px;
+    }
+    /*BEER SEARCH CONTAINER*/
+    #beerSearch {
+        margin: 580px 60px 60px 60px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    #beerSearch form {
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+    }
+    #beerSearch form input {
+        margin: 5px;
+        line-height: 16px;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 5px;
+        font-weight: bold;
+        width: 175px;
+    }
+    #beerButton {
+        width: 175px;
+    }
+    #beerSearch select {
+        padding: 2px;
+        border: 1px solid rgb(2, 2, 145);
+        font-size: 16px;
+        line-height: 22px;
+        cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+    }
+    .measurementsContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .a {
+        display: flex;
+        justify-content: center;
+        width: 250px;
+    }
+    .b {
+        display: flex;
+        flex-direction: column;
+    }
+    #beerByName,
+    #foods {
+        width: 100px;
+        padding: 5px;
+        text-indent: 5px;
+    }
+    #beerSearch option {
+        width: 100px;
+    }
+    #sort {
+        width: fit-content;
+    }
+    #ibuNum,
+    #abvNum,
+    #ebcNum {
+        width: 90px;
+        padding: 5px;
+    }
+    /*BEER RESULTS CONTAINER*/
+    #beerResults {
+        margin: 80px;
+    }
+    #bname {
+        font-size: 30px;
+    }
+    /*BEER FACTS*/
+    #beerFacts {
+        margin: 435px 80px 450px 80px;
+    }
+    .beerResult li {
+        border: none;
+    }
+    #beerFacts input {
+        text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+    }
+    #ebcchart {
+        width: 300px;
+        text-align: center;
+    }
+    #ibuchart {
+        height: 200px;
+    }
+    .ABV,
+    .IBU,
+    .EBC {
+        text-align: left;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        text-indent: 10px;
+        padding: 10px;
+    }
+    .EBC {
+        text-align: center;
+    }
+    .b {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #beerLogo {
+        display: block;
+        height: 95px;
+        float: left;
+        margin-left: 15px;
+    }
+    h1 {
+        font-size: 65px;
+        line-height: 70px;
+        border: 1px solid rgb(82, 77, 77);
+        text-align: center;
+        margin: 100px;
+        padding: 40px;
+    }
+    #from,
+    #to {
+        font-size: 42px;
+        margin: 10px;
+    }
+    /*navbar*/
+    nav {
+        height: 100px;
+        position: fixed;
+        top: 0;
+    }
+    nav ul {
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-end;
+    }
+    nav ul li a {
+        margin: 10px;
+        font-size: 30px;
+        border: none;
+        line-height: 30px;
+        padding: 5px;
+    }
+    #beerUnits {
+        justify-content: center;
+    }
+    #brewerySearchContainer {
+        margin: 100px 100px 50px 100px;
+    }
+    #breweryParameter {
+        width: 60%;
+    }
+    #brewerySearchContainer form {
+        line-height: 20px;
+        font-size: 20px;
+        padding: 5px;
+        margin: 15px;
+        width: 400px;
+    }
+    .breweryResults li,
+    .breweryResults li a {
+        font-size: 20px;
+    }
+    #beerSearch {
+        margin: 740px 150px 100px 150px;
+    }
+    .b {
+        flex-direction: row;
+    }
+    #bname {
+        background-color: #22331c;
+        border: none;
+        color: white;
+        text-shadow: .5px .5px #a1aa93;
+        font-size: 34px;
+        text-decoration: underline;
+    }
+    #beerSearch form input {
+        width: 290px;
+        padding: 10px;
+    }
+    #beerButton {
+        width: 290px;
+    }
+    #beerResults {
+        margin: 100px;
+    }
+    #beerFacts {
+        margin: 435px 200px 600px 200px;
+        padding: 50px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    #beerFacts input {
+        text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+    }
+    #ibuchart {
+        height: 360px;
+    }
+    #abvFactsContainer,
+    #ibuFactsContainer,
+    #ebcFactsContainer {
+        padding: 20px;
+    }
+    .ABV,
+    .IBU,
+    .EBC {
+        text-align: left;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        text-indent: 10px;
+    }
+    .EBC {
+        text-align: center;
+    }
+    .a {
+        flex-direction: row;
+        width: 350px;
+    }
+}
