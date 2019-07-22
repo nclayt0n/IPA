@@ -9,13 +9,13 @@ July 15, 2019
 
 Purpose
 _______
-This app Searches for Breweries & Beers. 
+This app Searches for Breweries & Brewdog Beers. 
 
 
 Features
 ________
 Brewery Search can either search by City, City/State, or just State. If nothing specified, it will just return 10 Breweries.
-Beer Search can search with multiple parameters; Beer Name, Food Pairings, ABV, IBU, or EBC. 
+Brewdog's Beer Search can search with multiple parameters; Beer Name, Food Pairings, ABV, IBU, or EBC. 
 Those Results can be sorted by BeerName(Alpha), ascending(ABV/IBU/EBC), OR descending(ABV/IBU/EBC).
 There is also a Beer Facts Section.
 
