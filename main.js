@@ -9,49 +9,52 @@ let sort;
 let maxNum;
 const beerURL = 'https://api.punkapi.com/v2/beers';
 /*INPUT BUTTONS, TOGGLECLASSES*/
-$('#beerParameterButton').click(event => {
-    $('.beerParameterButton').toggleClass('hidden')
-})
-$('#foodParameterButton').click(event => {
-    $('.foodParameterButton').toggleClass('hidden')
-})
-$('#abvParameterButton').click(event => {
-    $('.abvParameterButton').toggleClass('hidden')
-})
-$('#ibuParameterButton').click(event => {
-    $('.ibuParameterButton').toggleClass('hidden')
-})
-$('#ebcParameterButton').click(event => {
-    $('.ebcParameterButton').toggleClass('hidden')
-})
-$('#numParameterButton').click(event => {
-    $('.numParameterButton').toggleClass('hidden')
-})
-$('#sortParameterButton').click(event => {
-    $('.sortParameterButton').toggleClass('hidden')
-})
-$('#ibuFacts').click(event => {
-    $('.IBU').toggleClass('hidden');
-});
-$('#abvFacts').click(event => {
-    $('.ABV').toggleClass('hidden');
-});
-$('#ebcFacts').click(event => {
-    $('.EBC').toggleClass('hidden');
-});
-/*RESET SEARCH BUTTONS*/
-$('.reset').click(event => {
-    beerArray = [];
-    params = {};
-    $('.beerResult').remove();
-    $('.zeroResults').remove();
-    $('.reset').addClass('hidden');
-})
-$('.reset2').click(event => {
-    $('.brewResults').remove();
-    $('.zeroResults').remove();
-    $('.reset2').addClass('hidden');
-})
+function setUp() {
+    $('#beerParameterButton').click(event => {
+        $('.beerParameterButton').toggleClass('hidden');
+    })
+    $('#foodParameterButton').click(event => {
+        $('.foodParameterButton').toggleClass('hidden');
+    })
+    $('#abvParameterButton').click(event => {
+        $('.abvParameterButton').toggleClass('hidden');
+    })
+    $('#ibuParameterButton').click(event => {
+        $('.ibuParameterButton').toggleClass('hidden');
+    })
+    $('#ebcParameterButton').click(event => {
+        $('.ebcParameterButton').toggleClass('hidden');
+    })
+    $('#numParameterButton').click(event => {
+        $('.numParameterButton').toggleClass('hidden');
+    })
+    $('#sortParameterButton').click(event => {
+        $('.sortParameterButton').toggleClass('hidden');
+    })
+    $('#ibuFacts').click(event => {
+        $('.IBU').toggleClass('hidden');
+    });
+    $('#abvFacts').click(event => {
+        $('.ABV').toggleClass('hidden');
+    });
+    $('#ebcFacts').click(event => {
+        $('.EBC').toggleClass('hidden');
+    });
+    /*RESET SEARCH BUTTONS*/
+    $('.reset').click(event => {
+        beerArray = [];
+        params = {};
+        $('.beerResult').remove();
+        $('.zeroResults').remove();
+        $('.reset').addClass('hidden');
+    })
+    $('.reset2').click(event => {
+        $('.brewResults').remove();
+        $('.zeroResults').remove();
+        $('.reset2').addClass('hidden');
+    })
+}
+
 
 /*BEER SEARCH CODE*/
 function displayBeers() {
@@ -138,7 +141,7 @@ function fetchBeerURL(queryString) {
 
 }
 
-function getBeerSearchParameters() {
+function beerStart() {
     $('#beerButton').click(event => {
         beerArray = [];
         params = {};
@@ -234,7 +237,7 @@ function fetchBreweries() {
 }
 
 
-function createBreweriesURL() {
+function breweriesStart() {
     $('#breweryButton').click(event => {
         $('.brewResults').remove();
         $('.zeroResults').remove();
@@ -247,8 +250,9 @@ function createBreweriesURL() {
 }
 
 function start() {
-    createBreweriesURL();
-    getBeerSearchParameters();
+    breweriesStart();
+    beerStart();
+    setUp();
 }
 
 $(start);
