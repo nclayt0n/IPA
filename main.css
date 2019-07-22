@@ -356,6 +356,7 @@ select.parameters {
 
 .a {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -482,7 +483,7 @@ select.parameters {
 }
 
 #ibuchart {
-    height: 150px;
+    height: 275px;
     float: right;
     margin: auto;
     border: 5px solid #a1aa93;
@@ -677,8 +678,9 @@ p.EBC {
     #beerSearch select {
         padding: 2px;
         border: 1px solid rgb(2, 2, 145);
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
+        width: 175px;
         cursor: pointer;
         margin: 5px;
         font-weight: bold;
@@ -692,8 +694,6 @@ p.EBC {
     }
     .a {
         display: flex;
-        justify-content: center;
-        width: 250px;
     }
     .b {
         display: flex;

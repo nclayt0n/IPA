@@ -13,11 +13,11 @@
 <body>
     <header id="loadPage">
         <h1><span id="from">From</span> API <span id="to">to</span> IPA</h1>
-        <div id="links">
+        <section id="links">
             <a id="brewerySearchLink" href="#brewery">Find A Local Brewery</a>
             <a id="beerSearchLink" href="#beer">Find A Beer For You</a>
             <a id="factsSearchLink" href="#facts"> Beer Facts</a></li>
-        </div>
+        </section>
     </header>
 
 
@@ -39,9 +39,9 @@
             <p class="info">Here in the US, they don't have many locations, but craft beer is still such a treat, worth enjoying. So checkout the breweries by City and or State Search to find a brewery near you! </p>
         </section>
         <section id="brewerySearchContainer">
-            <div class="anchor">
+            <section class="anchor">
                 <a id="brewery"> </a>
-            </div>
+            </section>
             <h2>Brewery Search</h2>
             <form id="breweryCityParameter">
                 <input class="parameters" id="brewerySearch" type="text" placeholder="City">
@@ -101,87 +101,88 @@
                         <option value="Wisconsin">Wisconsin</option>
                         <option value="Wyoming">Wyoming</option>
                     </select></form>
-            <form><input class="parameters" id="breweryButton" type="button" value="Search"></form>
+            <button class="parameters" id="breweryButton">SEARCH</button>
+
         </section>
 
         <section>
             <section class="breweryResults hidden">
             </section>
-            <div class="reset2 hidden">
+            <section class="reset2 hidden">
                 <a id="reset2" href="#brewery">New Brewery Search</a>
-            </div>
+            </section>
         </section>
         <section class="siteInfo">
             <p class="info">Interested in reading up on some delicious Beers? Search for the type of beer you want. Looking for a beer to go with those wings? Or maybe a salad? Search something specific, or just read up on all they have to offer. Then head to a local
                 store and pick some up!</p>
         </section>
         <section id="beerSearch">
-            <div class="anchor">
+            <section class="anchor">
                 <a id="beer"> </a>
-            </div>
+            </section>
             <h2>BrewDog's Beer Search</h2>
             <form>
-                <div class="measurementsContainer">
-                    <div class="b"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></div>
+                <section class="measurementsContainer">
+                    <section class="b"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></section>
                     <br>
-                    <div class="b"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></div> <br>
-                    <div class="b"><input type="button" value="Number of Results" id="numParameterButton">
-                        <input type="number" id="maxNum" max="25" min="1" value="10" class="numParameterButton hidden"></div>
+                    <section class="b"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></section> <br>
+                    <section class="b"><input type="button" value="Number of Results" id="numParameterButton">
+                        <input type="number" id="maxNum" max="25" min="1" value="10" class="numParameterButton hidden"></section>
                     <br>
-                    <div class="a">
+                    <section class="a">
                         <input type="button" value="ABV" id="abvParameterButton"><select id="abvSelect" class="abvParameterButton hidden"><option value="greaterThan" class="abvParameterButton hidden">Greater Than</option><option value="lessThan" class="abvParameterButton hidden">Less Than</option></select>
                         <input id="abvNum" type="number" min="3" max="13" placeholder="3-13" class="abvParameterButton hidden">
-                    </div>
+                    </section>
                     <br>
-                    <div class="a">
-                        <input type="button" value="IBU" id="ibuParameterButton"><select id="ibuSelect" class="ibuParameterButton hidden"><option value="greaterThan" class="ibuParameterButton hidden">Greater Than</option><option value="lessThan" class="ibuParameterButton hidden">Less Than</option></select>                        <input type="number" min="5" max="100" id="ibuNum" placeholder="5-100" class="ibuParameterButton hidden"></div>
+                    <section class="a">
+                        <input type="button" value="IBU" id="ibuParameterButton"><select id="ibuSelect" class="ibuParameterButton hidden"><option value="greaterThan" class="ibuParameterButton hidden">Greater Than</option><option value="lessThan" class="ibuParameterButton hidden">Less Than</option></select>                        <input type="number" min="5" max="100" id="ibuNum" placeholder="5-100" class="ibuParameterButton hidden"></section>
                     <br>
-                    <div class="a">
+                    <section class="a">
                         <input type="button" value="EBC" id="ebcParameterButton"><select id="ebcSelect" class="ebcParameterButton hidden"><option value="greaterThan" class="ebcParameterButton hidden">Greater Than</option><option value="lessThan" class="ebcParameterButton hidden">Less Than</option>
                     </select> <input id="ebcNum" class="ebcParameterButton hidden" type="number" min="1" max="140" placeholder="1-140">
-                    </div><br>
+                    </section><br>
                     <input type="button" value="Sort Search Results" id="sortParameterButton">
                     <select id="sort" class="sortParameterButton hidden">
                         <option value="Name">Beer Name(alphabetically)</option>
                         <option value="ABVgreater">ABV (Low to High)</option><option value="ABVless">ABV (High to Low)</option><option value="IBUgreater">IBU (Low to High)</option><option value="IBUless">IBU (High to Low)</option><option value="EBCgreater">EBC (Low to High)</option><option value="EBCless">EBC (High to Low)</option>
                     </select><br>
-                </div>
+                </section>
             </form>
             <input type="button" value="SEARCH" id="beerButton">
         </section>
 
         <section id="beerResults" class="beerResults hidden"></section>
-        <div class="reset hidden">
+        <section class="reset hidden">
             <a id="reset" href="#beer">Start New Search</a>
-        </div>
+        </section>
 
         <section class="siteInfo">
             <p class="info">New to the beer game, or a vet and just not sure about some of the search terms? The beer facts below will help you to have a better understanding, or possibly learn something new.</p>
         </section>
         <section id='beerFacts'>
-            <div class="anchor">
+            <section class="anchor">
                 <a id="facts"></a>
-            </div>
+            </section>
             <h2>Beer Facts</h2>
-            <div id="abvFactsContainer">
+            <section id="abvFactsContainer">
                 <input type="button" value="ABV" id="abvFacts">
                 <p class="ABV hidden">ABV stands for Alcohol By Volume. Beer strength is the alcohol content measured by volume expressed as a percentage, that is to say, the number of millilitres of absolute alcohol in 100 ml of beer.</p>
-            </div>
-            <div id="ibuFactsContainer">
+            </section>
+            <section id="ibuFactsContainer">
                 <input type="button" value="IBU" id="ibuFacts">
                 <p class="IBU hidden"><img src="images/IBU.png" alt="IBU chart" id="ibuchart">IBU stands for Internation Bittering Units.<br>Generally speaking, beers with IBU of less than 20 display little to no hops presence. Beers with IBU from 20 to 45, the most common
                     range, reveal a mild to pronounced hops presence. Heavily hopped beers with IBU greater than 45 can taste quite bitter.<br><br> "Malt adds sweetness, so generously malted beers in the high IBU range can come across as more sweet than
                     bitter, such as a dark stout. Guinness, with an IBU of 40, tastes sweeter to most drinkers than Odell 90 Schilling, a Scottish-style ale with an IBU of 27 but a distinctly bitter bite on the finish. IPAs dominate the hoppiness race,
                     with double and triple IPAs pushing the IBU rating into the 70-plus range." <a href="https://www.thespruceeats.com/international-bittering-units-353254"> -thespruceeats</a>
                 </p>
-            </div>
+            </section>
 
-            <div id="ebcFactsContainer">
+            <section id="ebcFactsContainer">
                 <input type="button" value="EBC" id="ebcFacts">
                 <p class="EBC hidden">EBC stands for European Brewery Convention. It refers to the color of a beer.
                     <br><img id="ebcchart" src="images/ebc.png" alt="picutre of the EBC color chart">
                 </p>
-            </div>
+            </section>
         </section>
     </main>
     <footer>
