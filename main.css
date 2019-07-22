@@ -328,8 +328,8 @@ select.parameters {
     margin: 2px;
     border: 1px solid black;
     color: black;
-    line-height: 10px;
-    font-size: 8px;
+    line-height: 12px;
+    font-size: 10px;
     cursor: pointer;
     padding: 5px;
     font-weight: bold;
@@ -339,8 +339,8 @@ select.parameters {
 #beerSearch select {
     padding: 2px;
     border: 1px solid #22331c;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 8px;
+    line-height: 10px;
     cursor: pointer;
     margin: 5px;
     font-weight: bold;
