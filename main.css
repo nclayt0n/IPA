@@ -30,7 +30,7 @@ footer p {
     /* background-color: #8ddf19d7; */
     padding: 5px;
     margin: 5px;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -46,7 +46,7 @@ footer p {
 }
 
 .siteInfo {
-    margin: 100px 30px 50px 30px;
+    margin: 30px;
     padding: 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -56,10 +56,10 @@ footer p {
     margin: 5px;
     padding: 5px;
     text-indent: 15px;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: bold;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
     letter-spacing: 1.5px;
 }
 
@@ -69,7 +69,7 @@ footer p {
 header {
     display: flex;
     flex-direction: column;
-    margin: 100px 10px 305px 10px;
+    margin: 100px 10px 75px 10px;
     padding: 30px;
     border: 2px solid rgb(82, 77, 77);
     align-items: center;
@@ -95,7 +95,7 @@ h1 {
 h1,
 #from,
 #to {
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
 }
 
 #from,
@@ -127,7 +127,7 @@ a#factsSearchLink {
 nav {
     width: 100%;
     height: 70px;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -142,6 +142,7 @@ nav {
 
 nav ul {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     list-style-type: none;
     padding: 10px;
@@ -151,7 +152,6 @@ nav ul {
 }
 
 nav li {
-    justify-content: space-around;
     justify-content: center;
     align-items: center;
     margin: 4px;
@@ -160,14 +160,16 @@ nav li {
 }
 
 nav ul li a {
+    text-align: center;
     display: flex;
-    font-size: 21px;
-    line-height: 22px;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
     font-weight: bold;
-    background-color: #96795696;
+    /* background-color: #96795696; */
     color: white;
     text-shadow: 1px 1px#22331c;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
 }
 
 main {
@@ -195,15 +197,15 @@ main {
 }
 
 h2 {
-    font-size: 34px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 32px;
     text-align: center;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
 }
 
 #brewerySearchContainer {
     border: 3px solid #22331c;
-    margin: 100px 30px 30px 30px;
+    margin: 80px 10px 30px 10px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -248,13 +250,13 @@ select.parameters {
 }
 
 #brewName {
-    font-size: 28px;
+    font-size: 20px;
     margin: 20px;
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px rgb(202, 142, 31);
     text-transform: uppercase;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
 }
 
 .breweryResults ul {
@@ -298,7 +300,7 @@ select.parameters {
 #beerSearch h2 {
     color: white;
     text-shadow: 2px 2px black;
-    font-size: 38px;
+    font-size: 32px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -403,6 +405,21 @@ select.parameters {
     text-shadow: .5px .5px rgb(202, 142, 31);
 }
 
+.js-error-message {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 60px 20px 60px;
+    border: 2px solid #8bdf19;
+    color: red;
+    background-color: white;
+    text-shadow: .5px .5px black;
+}
+
 #bname {
     background-color: white;
     font-size: 26px;
@@ -411,7 +428,7 @@ select.parameters {
     padding: 5px;
     color: #22331c;
     border: 1px solid #8bdf19;
-    font-family: 'amatic sc';
+    font-family: Verdana, sans-serif;
 }
 
 #abv,
@@ -452,7 +469,7 @@ select.parameters {
 #beerFacts {
     display: flex;
     flex-direction: column;
-    margin: 200px 20px 300px 20px;
+    margin: 100px 20px 200px 20px;
     padding: 5px;
     text-align: center;
     border: 3px solid #a1aa93;
@@ -539,12 +556,12 @@ p.EBC {
 
 @media screen and (min-width:525px) {
     .siteInfo {
-        margin: 200px 80px 100px 80px;
+        margin: 50px;
         padding: 10px;
     }
     .info {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 24px;
     }
     #beerLogo {
         height: 75px;
@@ -556,7 +573,7 @@ p.EBC {
     header {
         display: flex;
         flex-direction: column;
-        margin: 300px 40px 250px 40px;
+        margin: 200px 60px 150px 60px;
         padding: 30px;
         border: 2px solid rgb(82, 77, 77);
         align-items: center;
@@ -604,10 +621,8 @@ p.EBC {
         margin: 10px;
     }
     nav ul li a {
-        margin: 10px;
-        font-size: 24px;
+        font-size: 18px;
         border: none;
-        line-height: 24px;
         padding: 5px;
     }
     #brewerySearchContainer form {
@@ -632,7 +647,7 @@ p.EBC {
         padding: 5px;
     }
     #brewerySearchContainer {
-        margin: 200px 60px 100px 60px;
+        margin: 150px 60px 50px 60px;
         padding: 30px;
     }
     .breweryResults {
@@ -642,7 +657,8 @@ p.EBC {
         width: 600px;
     }
     #brewName {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 30px;
     }
     .breweryResults li,
     .breweryResults li a {
@@ -651,7 +667,7 @@ p.EBC {
     }
     /*BEER SEARCH CONTAINER*/
     #beerSearch {
-        margin: 330px 60px 60px 60px;
+        margin: 120px 60px 0px 60px;
         display: flex;
         flex-direction: column;
         padding: 20px;
@@ -726,7 +742,7 @@ p.EBC {
     }
     /*BEER FACTS*/
     #beerFacts {
-        margin: 435px 80px 450px 80px;
+        margin: 150px 60px 150px 60px;
     }
     .beerResult li {
         border: none;
@@ -764,12 +780,12 @@ p.EBC {
 
 @media screen and (min-width:900px) {
     .siteInfo {
-        margin: 250px 80px 250px 80px;
+        margin: 150px 80px 150px 80px;
         padding: 20px;
     }
     .info {
-        font-size: 38px;
-        line-height: 42px;
+        font-size: 30px;
+        line-height: 34px;
     }
     #beerLogo {
         display: block;
@@ -804,16 +820,15 @@ p.EBC {
     }
     nav ul li a {
         margin: 10px;
-        font-size: 30px;
+        font-size: 24px;
         border: none;
-        line-height: 30px;
         padding: 5px;
     }
     #beerUnits {
         justify-content: center;
     }
     #brewerySearchContainer {
-        margin: 100px 100px 50px 100px;
+        margin: 50px 40px 10px 40px;
     }
     #breweryParameter {
         width: 60%;
@@ -830,7 +845,7 @@ p.EBC {
         font-size: 20px;
     }
     #beerSearch {
-        margin: 440px 150px 100px 150px;
+        margin: 190px 40px 0px 40px;
     }
     .b {
         flex-direction: row;
@@ -854,11 +869,11 @@ p.EBC {
         margin: 100px;
     }
     #beerFacts {
-        margin: 435px 200px 550px 200px;
+        margin: 200px 40px 200px 40px;
         padding: 50px;
     }
     h2 {
-        font-size: 35px;
+        font-size: 32px;
     }
     #beerFacts input {
         font-size: 18px;

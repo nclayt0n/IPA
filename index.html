@@ -13,42 +13,38 @@
 <body>
     <header id="loadPage">
         <h1><span id="from">From</span> API <span id="to">to</span> IPA</h1>
-        <section id="links">
+        <!-- <section id="links">
             <a id="brewerySearchLink" href="#brewery">Find A Local Brewery</a>
             <a id="beerSearchLink" href="#beer">Find A Beer For You</a>
             <a id="factsSearchLink" href="#facts"> Beer Facts</a>
-        </section>
+        </section> -->
+        <nav>
+            <img id="beerLogo" src="images/logo2.png" alt="API to IPA logo">
+            <ul id="navLinks">
+                <li><a href="#brewery">Find a Brewery </a></li>
+                <li><a href="#beer"> Find a Beer </a></li>
+                <li><a href="#facts"> Beer Facts</a></li>
+
+            </ul>
+        </nav>
     </header>
 
-
-    <nav>
-        <img id="beerLogo" src="images/logo2.png" alt="API to IPA logo">
-        <ul id="navLinks">
-
-            <li class="logo hidden" id="logo">From API <br>to IPA</li>
-
-            <li><a href="#brewery">Find a Brewery </a></li>
-            <li><a href="#beer"> Find a Beer </a></li>
-            <li><a href="#facts"> Beer Facts</a></li>
-
-        </ul>
-    </nav>
     <main>
         <section class="siteInfo">
             <p class="info">BrewDog started in Scotland in 2007 when James and Martin wanted to give the world great, and freaking delicious, Craft Beer! Their Breweries are located in the Ellon & Overworks, Scotland, Brisbane, Australia, and Columbus,Ohio, USA.</p>
             <p class="info">Here in the US, they don't have many locations, but craft beer is still such a treat, worth enjoying. So checkout the breweries by City and or State, just search below to find a brewery near you! </p>
         </section>
         <section id="brewerySearchContainer">
-            <section class="anchor">
+            <div class="anchor">
                 <a id="brewery"> </a>
-            </section>
+            </div>
             <h2>Brewery Search</h2>
             <form>
                 <section id="breweryCityParameter">
                     <input class="parameters" id="brewerySearch" type="text" placeholder="City">
                 </section>
                 <section id="breweryStateParameter">
-                    <select class="parameters" name="state" id="state">
+                    <select required class="parameters" name="state" id="state">
                     <option value="">State</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -113,6 +109,7 @@
         <section>
             <section class="breweryResults hidden">
             </section>
+
             <section class="reset2 hidden">
                 <a id="reset2" href="#brewery">New Brewery Search</a>
             </section>
@@ -121,12 +118,12 @@
             <p class="info">Interested in reading up on some of BrewDog's delicious Beers? Looking for a beer to go with those wings? Or maybe a salad? Search something specific, or just read up on all they have to offer. Then head to a local store and pick some up!</p>
         </section>
         <section id="beerSearch">
-            <section class="anchor">
+            <div class="anchor">
                 <a id="beer"> </a>
-            </section>
+            </div>
             <h2>BrewDog's Beer Search</h2>
             <form>
-                <section class="measurementsContainer">
+                <div class="measurementsContainer">
                     <section class="b"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></section>
                     <br>
                     <section class="b"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></section> <br>
@@ -151,12 +148,13 @@
                         <option value="ABVgreater">ABV (Low to High)</option><option value="ABVless">ABV (High to Low)</option><option value="IBUgreater">IBU (Low to High)</option><option value="IBUless">IBU (High to Low)</option><option value="EBCgreater">EBC (Low to High)</option><option value="EBCless">EBC (High to Low)</option>
                     </select><br>
                     <button type="button" id="beerButton">SEARCH</button>
-                </section>
+                </div>
 
             </form>
         </section>
 
         <section id="beerResults" class="beerResults hidden"></section>
+
         <section class="reset hidden">
             <a id="reset" href="#beer">Start New Search</a>
         </section>
@@ -165,9 +163,9 @@
             <p class="info">New to the beer game, or a vet and just not sure about some of the search terms? The beer facts below will help you to have a better understanding, or possibly learn something new.</p>
         </section>
         <section id='beerFacts'>
-            <section class="anchor">
+            <div class="anchor">
                 <a id="facts"></a>
-            </section>
+            </div>
             <h2>Beer Facts</h2>
             <section id="abvFactsContainer">
                 <input type="button" value="ABV" id="abvFacts">

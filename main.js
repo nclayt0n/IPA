@@ -1,6 +1,6 @@
 /*BREWERY SEARCH VARIABLES*/
 const breweryURL = 'https://api.openbrewerydb.org/breweries';
-let urlString;
+let breweryUrlString;
 
 /*BEER SEARCH VARIABLES*/
 let beerArray = [];
@@ -105,21 +105,21 @@ function sortBeers(beerArray) {
 
 function createBeerArrayObj(responseJson) {
 
-    let x = responseJson.splice(0, maxNum);
+    let splicedResponse = responseJson.splice(0, maxNum);
 
-    for (let i = 0; i < x.length; i++) {
+    for (let i = 0; i < splicedResponse.length; i++) {
         beerArray.push({
-            beerName: x[i].name,
-            tagLine: x[i].tagline,
-            descriptions: x[i].description,
-            firstBrewed: x[i].first_brewed,
-            brewersTips: x[i].brewers_tips,
-            foodPairing: x[i].food_pairing.join(),
-            ingredients: x[i].ingredients,
-            volume: x[i].volume,
-            ibu: x[i].ibu,
-            abv: x[i].abv,
-            ebc: x[i].ebc
+            beerName: splicedResponse[i].name,
+            tagLine: splicedResponse[i].tagline,
+            descriptions: splicedResponse[i].description,
+            firstBrewed: splicedResponse[i].first_brewed,
+            brewersTips: splicedResponse[i].brewers_tips,
+            foodPairing: splicedResponse[i].food_pairing.join(),
+            ingredients: splicedResponse[i].ingredients,
+            volume: splicedResponse[i].volume,
+            ibu: splicedResponse[i].ibu,
+            abv: splicedResponse[i].abv,
+            ebc: splicedResponse[i].ebc
         });
     }
     sortBeers(beerArray);
@@ -136,7 +136,7 @@ function fetchBeerURL(queryString) {
         })
         .then(responseJson => createBeerArrayObj(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('.beerResults').append(`<div class="beerResult">Something went wrong: ${err.message}</div>`);
         });
 
 }
@@ -147,6 +147,7 @@ function beerStart() {
         params = {};
         $('.beerResult').remove();
         $('.zeroResults').remove();
+        $('.js-error-message').remove();
         maxNum = $('#maxNum').val();
         params = {
             beer_name: $('#beerByName').val(),
@@ -199,23 +200,23 @@ function spliceWebsiteUrl(url) {
     return (websiteMinusHTTPS.join(''));
 }
 
-function displayBreweries(x) {
+function displayBreweries(responseJson) {
     let phoneDisplay = [];
-    if (x.length === 0) {
+    if (responseJson.length === 0) {
         $(`.breweryResults`).append(`<p class="zeroResults"> There are no Breweries that match your search.</p>`);
     }
-    for (let i = 0; i < x.length; i++) {
+    for (let i = 0; i < responseJson.length; i++) {
 
-        if (x[i].website_url === '') {
-            x[i].website_url = "Website is not listed";
+        if (responseJson[i].website_url === '') {
+            responseJson[i].website_url = "Website is not listed";
         }
-        if (x[i].phone === '') {
+        if (responseJson[i].phone === '') {
             phoneDisplay.push('Phone number not listed');
         } else {
-            phoneDisplay.push(`(${x[i].phone[0]}${x[i].phone[1]}${x[i].phone[2]}) ${x[i].phone[3]}${x[i].phone[4]}${x[i].phone[5]}-${x[i].phone[6]}${x[i].phone[7]}${x[i].phone[8]}${x[i].phone[9]}`);
+            phoneDisplay.push(`(${responseJson[i].phone[0]}${responseJson[i].phone[1]}${responseJson[i].phone[2]}) ${responseJson[i].phone[3]}${responseJson[i].phone[4]}${responseJson[i].phone[5]}-${responseJson[i].phone[6]}${responseJson[i].phone[7]}${responseJson[i].phone[8]}${responseJson[i].phone[9]}`);
         };
-        $(`.breweryResults`).append(`<ul class="brewResults" id="breweryName"><span id="brewName">${x[i].name}</span><li id="brewCity">${x[i].city}, ${x[i].state}</li>
-        <li id="website"><a href="${x[i].website_url}" target="_blank">${spliceWebsiteUrl(x[i].website_url)}</a></li>
+        $(`.breweryResults`).append(`<ul class="brewResults" id="breweryName"><span id="brewName">${responseJson[i].name}</span><li id="brewCity">${responseJson[i].city}, ${responseJson[i].state}</li>
+        <li id="website"><a href="${responseJson[i].website_url}" target="_blank">${spliceWebsiteUrl(responseJson[i].website_url)}</a></li>
         <li id="phoneNumber"><a href="tel:+${phoneDisplay[i]}">${phoneDisplay[i]}</a></li>`);
     }
     $('.reset2').removeClass('hidden');
@@ -223,7 +224,7 @@ function displayBreweries(x) {
 
 
 function fetchBreweries() {
-    fetch(urlString)
+    fetch(breweryUrlString)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -232,7 +233,7 @@ function fetchBreweries() {
         })
         .then(responseJson => displayBreweries(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('.breweryResults').append(`<div class="brewResults">Something went wrong: ${err.message}<div>`);
         });
 }
 
@@ -244,8 +245,8 @@ function breweriesStart() {
 
         let breweryCity = $('#brewerySearch').val();
         let breweryState = $('#state').val();
-        urlString = `${breweryURL}?by_city=${breweryCity}&by_state=${breweryState}`;
-        fetchBreweries(urlString);
+        breweryUrlString = `${breweryURL}?by_city=${breweryCity}&by_state=${breweryState}`;
+        fetchBreweries(breweryUrlString);
     });
 }
 
