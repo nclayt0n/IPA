@@ -246,7 +246,7 @@ select.parameters {
     margin: auto;
     padding: 10px;
     text-align: center;
-    width: 350px;
+    width: 300px;
 }
 
 #brewName {
@@ -654,11 +654,11 @@ p.EBC {
         margin: auto;
         display: flex;
         justify-content: center;
-        width: 600px;
+        width: 400px;
     }
     #brewName {
-        font-size: 28px;
-        line-height: 30px;
+        font-size: 24px;
+        line-height: 28px;
     }
     .breweryResults li,
     .breweryResults li a {
@@ -839,6 +839,9 @@ p.EBC {
         padding: 5px;
         margin: 15px;
         width: 400px;
+    }
+    .breweryResults {
+        width: 800px;
     }
     .breweryResults li,
     .breweryResults li a {
