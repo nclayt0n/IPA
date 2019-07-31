@@ -364,8 +364,11 @@ select.parameters {
 
 #beerButton {
     display: flex;
-    border: .5px solid black;
-    background-color: rgb(161, 159, 159);
+    border: .5px solid rgb(241, 234, 234);
+    color: white;
+    background-color: rgb(107, 0, 0);
+    font-weight: bold;
+    text-shadow: .5px .5px black;
     justify-content: center;
     align-items: center;
     width: 100px;
