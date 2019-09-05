@@ -15,7 +15,7 @@ This app Searches for Breweries & Brewdog Beers.
 Features
 ________
 Brewery Search can either search by City, City/State, or just State, using Open Brewery DB. If nothing specified, it will just return 10 Breweries.
-Brewdog's Beer Search can search with multiple parameters; Beer Name, Food Pairings, ABV, IBU, or EBC. 
+Brewdog's Beer Search, using PunkApi, can search with multiple parameters; Beer Name, Food Pairings, ABV, IBU, or EBC. 
 Those Results can be sorted by BeerName(Alpha), ascending(ABV/IBU/EBC), OR descending(ABV/IBU/EBC).
 There is also a Beer Facts Section.
 
