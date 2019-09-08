@@ -193,7 +193,7 @@ function beerStart() {
 
 }
 
-/*THIS IS THE CODE FOR THE BREWERY API SEARCH*/
+
 function spliceWebsiteUrl(url) {
     let ar = url.split('');
     let websiteMinusHTTPS = ar.splice(11);
@@ -222,7 +222,7 @@ function displayBreweries(responseJson) {
     $('.reset2').removeClass('hidden');
 }
 
-
+/*THIS IS THE CODE FOR THE BREWERY API SEARCH*/
 function fetchBreweries() {
     fetch(breweryUrlString)
         .then(response => {
@@ -245,8 +245,12 @@ function breweriesStart() {
 
         let breweryCity = $('#brewerySearch').val();
         let breweryState = $('#state').val();
-        breweryUrlString = `${breweryURL}?by_city=${breweryCity}&by_state=${breweryState}`;
-        fetchBreweries(breweryUrlString);
+        if (breweryState.length === 0) {
+            return $('.breweryResults').append(`<div class="brewResults">Must select a State<div>`)
+        } else {
+            breweryUrlString = `${breweryURL}?by_city=${breweryCity}&by_state=${breweryState}`
+            fetchBreweries(breweryUrlString);
+        }
     });
 }
 
