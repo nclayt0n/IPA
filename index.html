@@ -124,25 +124,25 @@
             <h2>BrewDog's Beer Search</h2>
             <form>
                 <div class="measurementsContainer">
-                    <section class="b"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></section>
+                    <section class="twoWide"><input type="button" value="Beer Name" id="beerParameterButton"><input type="text" id="beerByName" class="beerParameterButton hidden" placeholder="Name"></section>
                     <br>
-                    <section class="b"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></section> <br>
-                    <section class="b"><input type="button" value="Number of Results" id="numParameterButton">
+                    <section class="twoWide"><input type="button" value="Food Pairings" id="foodParameterButton"><input type="text" id="foods" class="foodParameterButton hidden" placeholder="Pairing"></section> <br>
+                    <section class="twoWide"><input type="button" value="Total Results" id="numParameterButton">
                         <input type="number" id="maxNum" max="25" min="1" value="10" class="numParameterButton hidden"></section>
                     <br>
-                    <section class="a">
+                    <section class="threeWide">
                         <input type="button" value="ABV" id="abvParameterButton"><select id="abvSelect" class="abvParameterButton hidden"><option value="greaterThan" class="abvParameterButton hidden">Greater Than</option><option value="lessThan" class="abvParameterButton hidden">Less Than</option></select>
                         <input id="abvNum" type="number" min="3" max="13" placeholder="3-13" class="abvParameterButton hidden">
                     </section>
                     <br>
-                    <section class="a">
+                    <section class="threeWide">
                         <input type="button" value="IBU" id="ibuParameterButton"><select id="ibuSelect" class="ibuParameterButton hidden"><option value="greaterThan" class="ibuParameterButton hidden">Greater Than</option><option value="lessThan" class="ibuParameterButton hidden">Less Than</option></select>                        <input type="number" min="5" max="100" id="ibuNum" placeholder="5-100" class="ibuParameterButton hidden"></section>
                     <br>
-                    <section class="a">
+                    <section class="threeWide">
                         <input type="button" value="EBC" id="ebcParameterButton"><select id="ebcSelect" class="ebcParameterButton hidden"><option value="greaterThan" class="ebcParameterButton hidden">Greater Than</option><option value="lessThan" class="ebcParameterButton hidden">Less Than</option>
                     </select> <input id="ebcNum" class="ebcParameterButton hidden" type="number" min="1" max="140" placeholder="1-140">
                     </section><br>
-                    <input type="button" value="Sort Search Results" id="sortParameterButton">
+                    <input type="button" value="Sort Results" id="sortParameterButton">
                     <select id="sort" class="sortParameterButton hidden">
                         <option value="Name">Beer Name(alphabetically)</option>
                         <option value="ABVgreater">ABV (Low to High)</option><option value="ABVless">ABV (High to Low)</option><option value="IBUgreater">IBU (Low to High)</option><option value="IBUless">IBU (High to Low)</option><option value="EBCgreater">EBC (Low to High)</option><option value="EBCless">EBC (High to Low)</option>
